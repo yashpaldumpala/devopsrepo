@@ -1,4 +1,8 @@
-jenkins
+HEAD
+jenkin
+=======
+jenkinss
+>>>>>>> Develop
 {
     pipeline{
         
