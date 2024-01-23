@@ -1,6 +1,8 @@
 jenkins
 {
     pipeline{
-       agent  
+       agent
+       1234
+       456
     }
 }
