@@ -5,30 +5,35 @@ pipeline {
             steps {
                 // You do checkout steps here
                 // Get the developed code from SCM
+                echo 'checkout'
             }
         }
         stage('Build') {
             steps {
                 // Your build steps here
                 // Maven build is done here
+                echo 'build'
             }
         }
         stage('Test') {
             steps {
                 // Your testing is done here
                 // Test your code and check as per all acceptance
+                echo 'test'
             }
         }
         stage('Scan') {
             steps {
                 // Your code scan is done here
                 // Perform static code analysis (e.g., with SonarQube)
+                echo 'scan'
             }
         }
         stage('Artifactory') {
             steps {
                 // Your artifacts are done here
                 // Translate human-readable code to machine-readable code and generate artifacts like war, jar, dll
+                echo 'artifacts'
             }
         }
     }
