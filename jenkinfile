@@ -1,30 +1,35 @@
 pipeline {
     agent any
-    stage('Checkout') {
-        / You do checkout steps here /
-                /get the developed code from SCM/
+    stages {
+        stage('Checkout') {
+            steps {
+                // You do checkout steps here
+                // Get the developed code from SCM
             }
         }
-         stage('Build') {
-        / Your build steps here/
-                /maven build is done here/
+        stage('Build') {
+            steps {
+                // Your build steps here
+                // Maven build is done here
             }
         }
         stage('Test') {
-        / Your Testing is done here/
-                /Test your code and check as per all acceprance /
+            steps {
+                // Your testing is done here
+                // Test your code and check as per all acceptance
             }
         }
-        stage('scan') {
-        / Your code scan is done here/
-                /with static code analysis like sonar qube you scan your code /
+        stage('Scan') {
+            steps {
+                // Your code scan is done here
+                // Perform static code analysis (e.g., with SonarQube)
             }
         }
         stage('Artifactory') {
-        / Your artifacts is done here/
-                /we will translate human readable code to machine readable code and generate artifacts like war,jar,dll /
+            steps {
+                // Your artifacts are done here
+                // Translate human-readable code to machine-readable code and generate artifacts like war, jar, dll
             }
         }
-
-
+    }
 }
